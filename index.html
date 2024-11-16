@@ -8,7 +8,6 @@
     <title>Agrume</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <style>
-        /* Estilos do botão de voltar ao topo */
         #backToTop {
             position: fixed;
             bottom: 20px;
@@ -28,9 +27,9 @@
             background-color: #e65f00;
         }
 
-        /* Estilos para o menu hambúrguer */
+       
         .hamburger {
-            display: none;  /* Inicialmente escondido em telas grandes */
+            display: none;  
             cursor: pointer;
             font-size: 30px;
             color: #333;
@@ -57,14 +56,14 @@
             color: #ff7300;
         }
 
-        /* Estilo para o menu na versão mobile */
+       
         @media (max-width: 768px) {
             .hamburger {
-                display: block;  /* Exibe o ícone em telas pequenas */
+                display: block;  
             }
 
             .keymenu {
-                display: none;  /* Inicialmente escondido */
+                display: none; 
                 flex-direction: column;
                 position: absolute;
                 top: 60px;
@@ -77,7 +76,7 @@
             }
 
             .keymenu.active {
-                display: flex;  /* Exibe o menu quando ativado */
+                display: flex;  
             }
 
             .keymenu li {
@@ -104,13 +103,13 @@
 
 <body>
     <div class="wrapper">
-        <!-- Barra de navegação -->
+      
         <header>
             <nav class="navbar">
                 <div class="logo">
                     <img src="componentes/imagens/Logo equipe.png" height="10vh" alt="Logo da equipe Agrume">
                 </div>
-                <!-- Adicionamos o ícone do hambúrguer -->
+            
                 <div class="hamburger" onclick="toggleMenu()">
                     &#9776;
                 </div>
@@ -121,7 +120,7 @@
             </nav>
         </header>
 
-        <!-- Slide -->
+     
         <section class="slide" id="inicio">
             <img src="componentes/imagens/AgrumeSlide.png" alt="Imagem ilustrativa do Agrume" width="100%" height="100%">
         </section>
@@ -129,7 +128,7 @@
             <br><br>
         </div>
 
-        <!-- Seção de Destaque -->
+       
         <section class="highlight">
             <div class="content">
                 <div class="lol">
@@ -148,7 +147,7 @@
             <br><br>
         </div>
 
-        <!-- Seção de Produto -->
+       
         <section class="product" id="projeto">
             <div class="textpro">
                 O CitrusGuard é um sistema que utiliza a inteligência artificial aplicada ao reconhecimento de imagens, que calcula a probabilidade da sua árvore estar contaminada com a doença a partir de uma foto tirada na hora ou da sua própria galeria. Os dados coletados pela nossa inteligência artificial serão enviados ao nosso banco de dados e armazenados no mesmo. Após o processamento da imagem, se a planta estiver contaminada, notificaremos o usuário sobre possíveis cuidados para se ter com a planta.
@@ -184,7 +183,7 @@
             <br><br>
         </div>
         
-        <!-- Texto sobre a equipe -->
+      
         <section class="Textteam">
             Somos uma equipe de estudantes da FATEC de Registro. Estamos no primeiro semestre da faculdade e tivemos a ideia de criar um aplicativo para ajudar agricultoress de citros a cuidarem de suas plantas. Escolhemos este tema devido à grande importância dos citros no Brasil, que é o maior produtor de laranjas, de acordo com dados do Departamento de Agricultura dos Estados Unidos.
         </section>
@@ -205,18 +204,17 @@
         </footer>
     </div>
 
-    <!-- Botão de Voltar ao Topo -->
+   
     <button id="backToTop" title="Voltar ao topo">&#8679;</button>
 
     <script>
-        // Suaviza o scroll quando os links de navegação são clicados
+       
         document.querySelectorAll('.keymenu a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
 
-                // Verifica se o elemento alvo existe antes de tentar rolar até ele
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
@@ -226,7 +224,7 @@
             });
         });
 
-        // Mostrar ou esconder o botão de "Voltar ao Topo"
+  
         window.addEventListener('scroll', function () {
             const backToTopButton = document.getElementById('backToTop');
             if (window.scrollY > 300) {
@@ -236,7 +234,7 @@
             }
         });
 
-        // Quando o botão for clicado, rola suavemente até o topo da página
+    
         document.getElementById('backToTop').addEventListener('click', function () {
             window.scrollTo({
                 top: 0,
@@ -244,7 +242,7 @@
             });
         });
 
-        // Função para alternar o menu
+        
         function toggleMenu() {
             const menu = document.querySelector('.keymenu');
             menu.classList.toggle('active');

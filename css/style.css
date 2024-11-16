@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     background-color: #0B0B0B;
-    overflow-x: hidden; /* Evita o excesso de largura */
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -68,7 +68,8 @@ body {
     height: 50vh;
     align-items: center;
     justify-content: space-around;
-    padding: 0 5vw; /* Ajuste no padding */
+    padding: 0 5vw;
+    font-family: sans-serif;
 }
 
 .lol, .muckup {
@@ -100,12 +101,12 @@ body {
 
 .product {
     background-color: #0B0B0B;
-    height: auto; /* Alterado para auto para ajustar dinamicamente */
-    padding: 5vh 5vw; /* Ajustado para garantir o espaçamento adequado */
-    margin: 0; /* Removido margem extra */
+    height: auto; 
+    padding: 5vh 5vw;
+    margin: 0; 
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Mudado para alinhamento à esquerda */
+    justify-content: flex-start; 
 }
 
 .product .textpro {
@@ -113,21 +114,22 @@ body {
     color: white;
     text-align: center;
     margin-bottom: 2vh;
+    font-family: sans-serif;
 }
 
 .product .img {
     text-align: left;
-    width: 60%; /* Ajustado para garantir que a imagem do celular tenha o tamanho certo */
+    width: 60%; 
     height: auto;
-    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    max-width: 400px;
     margin-top: 20px;
-    margin-right: 0; /* Encosta a imagem na borda esquerda */
+    margin-right: 0; 
 }
 
 footer {
     background-color: #131212;
     color: #fff;
-    padding: 60px 0; /* Aumenta a altura do rodapé */
+    padding: 60px 0; 
     text-align: center;
     position: relative;
     width: 100%;
@@ -204,12 +206,12 @@ footer {
         align-items: center;
         justify-content: center;
         height: auto;
-        padding: 0 2vw; /* Ajuste para evitar espaço ciano extra */
+        padding: 0 2vw;
     }
 
     .lol, .muckup {
         margin-left: 0;
-        width: 90%; /* Ajustado para largura de 90% em telas menores */
+        width: 90%; 
     }
 
     .footer-container {
@@ -223,8 +225,10 @@ footer {
     }
 
     .Textteam, .text {
+        font-family: sans-serif;
         font-size: 3.5vh;
-        margin-top: 0; /* Ajustado para não sobrepor */
+        margin-top: 0; 
+        
     }
 }
 
@@ -244,7 +248,7 @@ footer {
 
     .lol, .muckup {
         margin-left: 0;
-        width: 100%; /* Ajustado para largura de 100% em telas pequenas */
+        width: 100%; 
     }
 
     .team {
@@ -257,7 +261,7 @@ footer {
     }
 
     footer {
-        padding: 60px 0; /* Aumenta a altura do rodapé */
+        padding: 60px 0;
     }
 
     .footer-container {
@@ -303,11 +307,11 @@ footer {
     color: white;
     font-size: 3vh;
     text-align: center;
-    margin-top: 0; /* Ajustado para não sobrepor */
-    margin-left: 0; /* Removido o valor negativo da margem */
+    margin-top: 0; 
+    margin-left: 0;
 }
 
-/* Ajustes finais */
+
 .product, .highlight, .team, footer {
-    padding: 0; /* Remove qualquer padding extra */
+    padding: 0; 
 }
