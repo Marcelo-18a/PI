@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agrume: aplicativo para detectar gomose em citros utilizando inteligência artificial.">
+    <meta name="author" content="Equipe Agrume">
+    <title>Agrume</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <style>
+        /* Estilos do botão de voltar ao topo */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff7300;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #backToTop:hover {
+            background-color: #e65f00;
+        }
+
+        /* Estilos para o menu hambúrguer */
+        .hamburger {
+            display: none;  /* Inicialmente escondido em telas grandes */
+            cursor: pointer;
+            font-size: 30px;
+            color: #333;
+            padding: 10px;
+        }
+
+        .keymenu {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+        }
+
+        .keymenu li {
+            margin-left: 20px;
+        }
+
+        .keymenu li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .keymenu li a:hover {
+            color: #ff7300;
+        }
+
+        /* Estilo para o menu na versão mobile */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;  /* Exibe o ícone em telas pequenas */
+            }
+
+            .keymenu {
+                display: none;  /* Inicialmente escondido */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+                margin: 0;
+            }
+
+            .keymenu.active {
+                display: flex;  /* Exibe o menu quando ativado */
+            }
+
+            .keymenu li {
+                margin: 10px 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            .keymenu li a {
+                font-size: 22px;
+                color: #333;
+                padding: 10px;
+                display: block;
+                text-align: center;
+            }
+
+            .keymenu li a:hover {
+                background-color: #ff7300;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Barra de navegação -->
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="componentes/imagens/Logo equipe.png" height="10vh" alt="Logo da equipe Agrume">
+                </div>
+                <!-- Adicionamos o ícone do hambúrguer -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    &#9776;
+                </div>
+                <ul class="keymenu">
+                    <li><a href="#projeto">Projeto</a></li>
+                    <li><a href="#equipes">Equipe</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Slide -->
+        <section class="slide" id="inicio">
+            <img src="componentes/imagens/AgrumeSlide.png" alt="Imagem ilustrativa do Agrume" width="100%" height="100%">
+        </section>
+        <div class="branco">
+            <br><br>
+        </div>
+
+        <!-- Seção de Destaque -->
+        <section class="highlight">
+            <div class="content">
+                <div class="lol">
+                    <img src="componentes/imagens/Logo.png" alt="Logo Agrume" width="90%" height="auto">
+                    <div class="text">
+                        Tivemos a ideia de um produto que identifica a gomose em citros através da inteligência artificial! O cliente tira uma imagem da folha ou do fruto que ele acha que possa estar contaminado e, em seguida, a IA analisa a probabilidade de infecção pelo fungo. O aplicativo também possui uma aba com os cuidados necessários caso a planta esteja realmente infectada.
+                    </div>
+                </div>
+            </div>
+            <div class="muckup">
+                <img src="componentes/imagens/iPhone 16 Pro.png" alt="Mockup do aplicativo no iPhone" width="100%" height="auto">
+            </div>
+        </section>
+
+        <div class="branco">
+            <br><br>
+        </div>
+
+        <!-- Seção de Produto -->
+        <section class="product" id="projeto">
+            <div class="textpro">
+                O CitrusGuard é um sistema que utiliza a inteligência artificial aplicada ao reconhecimento de imagens, que calcula a probabilidade da sua árvore estar contaminada com a doença a partir de uma foto tirada na hora ou da sua própria galeria. Os dados coletados pela nossa inteligência artificial serão enviados ao nosso banco de dados e armazenados no mesmo. Após o processamento da imagem, se a planta estiver contaminada, notificaremos o usuário sobre possíveis cuidados para se ter com a planta.
+            </div>
+            <div class="img cel">
+                <img src="componentes/imagens/Celular.png" alt="Imagem do produto">
+            </div>
+        </section>
+
+        <div class="branco">
+            <br><br>
+        </div>
+
+        <section class="team" id="equipes">
+            <div class="member">
+                <img src="componentes/imagens/caty.png" alt="Catarine Pereira, Front-end" width="100%" height="auto">
+                <div class="nomes">Catarine Pereira</div>
+                <div class="fun">Front-end</div>
+            </div>
+            <div class="member">
+                <img src="componentes/imagens/Marcelo.png" alt="Marcelo Augusto, UI/UX" width="100%" height="auto">
+                <div class="nomes">Marcelo Augusto</div>
+                <div class="fun">UI/UX</div>
+            </div>
+            <div class="member">
+                <img src="componentes/imagens/sam.png" alt="Samia Muniz, Back-end" width="100%" height="auto">
+                <div class="nomes">Samia Muniz</div>
+                <div class="fun">Back-end</div>
+            </div>
+        </section>
+
+        <div class="branco">
+            <br><br>
+        </div>
+        
+        <!-- Texto sobre a equipe -->
+        <section class="Textteam">
+            Somos uma equipe de estudantes da FATEC de Registro. Estamos no primeiro semestre da faculdade e tivemos a ideia de criar um aplicativo para ajudar agricultoress de citros a cuidarem de suas plantas. Escolhemos este tema devido à grande importância dos citros no Brasil, que é o maior produtor de laranjas, de acordo com dados do Departamento de Agricultura dos Estados Unidos.
+        </section>
+
+        <div class="branco">
+            <br><br>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>&copy; 2024 Agrume. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Contato</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Botão de Voltar ao Topo -->
+    <button id="backToTop" title="Voltar ao topo">&#8679;</button>
+
+    <script>
+        // Suaviza o scroll quando os links de navegação são clicados
+        document.querySelectorAll('.keymenu a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                // Verifica se o elemento alvo existe antes de tentar rolar até ele
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mostrar ou esconder o botão de "Voltar ao Topo"
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Quando o botão for clicado, rola suavemente até o topo da página
+        document.getElementById('backToTop').addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Função para alternar o menu
+        function toggleMenu() {
+            const menu = document.querySelector('.keymenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

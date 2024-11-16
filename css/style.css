@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    background-color: #0B0B0B;
+    overflow-x: hidden; /* Evita o excesso de largura */
+}
+
+.navbar {
+    display: flex;
+    background-color: #000;
+    height: 13vh;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    padding: 0 3vw;
+    z-index: 1000;
+}
+
+.navbar .keymenu a:hover {
+    color: #ff7300;
+    transition: all .6s;
+}
+
+.navbar .keymenu a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    height: 8vh;
+}
+
+.keymenu {
+    display: flex;
+    margin-left: auto;
+    gap: 2vw;
+}
+
+.keymenu li {
+    list-style: none;
+}
+
+.keymenu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+}
+
+.slide {
+    background-color: #ff7300;
+    height: 50vh;
+}
+
+.highlight {
+    display: flex;
+    background-color: #0B0B0B;
+    color: aliceblue;
+    height: 50vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 5vw; /* Ajuste no padding */
+}
+
+.lol, .muckup {
+    height: 100%;
+    width: 100%;
+}
+
+.team {
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: space-around;
+    padding: 5vh 0;
+    flex-wrap: wrap;
+}
+
+.member {
+    text-align: center;
+    color: rgb(250, 137, 8);
+    width: 30%;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.member img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product {
+    background-color: #0B0B0B;
+    height: auto; /* Alterado para auto para ajustar dinamicamente */
+    padding: 5vh 5vw; /* Ajustado para garantir o espaçamento adequado */
+    margin: 0; /* Removido margem extra */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Mudado para alinhamento à esquerda */
+}
+
+.product .textpro {
+    font-size: 2.5vh;
+    color: white;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.product .img {
+    text-align: left;
+    width: 60%; /* Ajustado para garantir que a imagem do celular tenha o tamanho certo */
+    height: auto;
+    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    margin-top: 20px;
+    margin-right: 0; /* Encosta a imagem na borda esquerda */
+}
+
+footer {
+    background-color: #131212;
+    color: #fff;
+    padding: 60px 0; /* Aumenta a altura do rodapé */
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .keymenu li a {
+        font-size: 5vh;
+    }
+
+    .logo img {
+        height: 6vh;
+    }
+
+    .keymenu {
+        margin-left: 0;
+        gap: 5vw;
+    }
+
+    .team {
+        flex-direction: column;
+        padding: 3vh 0;
+    }
+
+    .member {
+        width: 80%;
+        margin: 1vh auto;
+    }
+
+    .highlight {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 0 2vw; /* Ajuste para evitar espaço ciano extra */
+    }
+
+    .lol, .muckup {
+        margin-left: 0;
+        width: 90%; /* Ajustado para largura de 90% em telas menores */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .Textteam, .text {
+        font-size: 3.5vh;
+        margin-top: 0; /* Ajustado para não sobrepor */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 10vh;
+        padding: 0 2vw;
+    }
+
+    .navbar .keymenu li a {
+        font-size: 5vh;
+    }
+
+    .highlight {
+        padding: 10px 0;
+    }
+
+    .lol, .muckup {
+        margin-left: 0;
+        width: 100%; /* Ajustado para largura de 100% em telas pequenas */
+    }
+
+    .team {
+        padding: 3vh 0;
+    }
+
+    .member {
+        width: 90%;
+        margin: 1vh auto;
+    }
+
+    footer {
+        padding: 60px 0; /* Aumenta a altura do rodapé */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-info p {
+        font-size: 14px;
+    }
+
+    .fun {
+        font-size: 2.5vh;
+    }
+
+    h1 {
+        font-size: 4vh;
+    }
+}
+
+.nomes {
+    color: rgb(240, 231, 231);
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.Textteam {
+    background-color: #0B0B0B;
+    color: white;
+    font-size: 2.8vh;
+    text-align: center;
+    margin-top: -5.5vh;
+    padding: 20px;
+}
+
+.text {
+    background-color: #0B0B0B;
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    margin-top: 0; /* Ajustado para não sobrepor */
+    margin-left: 0; /* Removido o valor negativo da margem */
+}
+
+/* Ajustes finais */
+.product, .highlight, .team, footer {
+    padding: 0; /* Remove qualquer padding extra */
+}
