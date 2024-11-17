@@ -12,18 +12,22 @@ body {
 
 .wrapper {
     background-color: #0B0B0B;
+    background-image: url('../componentes/imagens/bg.png');
+    background-size: cover;
+    width: 100%;
     overflow-x: hidden;
 }
 
 .navbar {
     display: flex;
-    background-color: #000;
-    height: 13vh;
+    background-color: #0b0b0b;
+    height: 18vh;
     position: fixed;
     width: 100%;
     align-items: center;
     padding: 0 3vw;
     z-index: 1000;
+    border-bottom: 2px solid #ff7300;
 }
 
 .navbar .keymenu a:hover {
@@ -38,6 +42,12 @@ body {
 
 .logo img {
     height: 8vh;
+}
+
+.img-cel {
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+    width: 60%;
 }
 
 .keymenu {
@@ -58,12 +68,18 @@ body {
 
 .slide {
     background-color: #ff7300;
-    height: 50vh;
+    height: 70vh;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.line {
+    background-color: #ff7300;
+    height: 0.1rem;
 }
 
 .highlight {
     display: flex;
-    background-color: #0B0B0B;
     color: aliceblue;
     height: 50vh;
     align-items: center;
@@ -72,13 +88,27 @@ body {
     font-family: sans-serif;
 }
 
-.lol, .muckup {
+.lol, .textpro {
     height: 100%;
-    width: 100%;
+    width: 90%;
+    padding: 2rem;
+}
+
+.textpro {
+    margin-left: 2rem;
+}
+
+.muckup {
+    margin-top: 8rem;
+    padding: 2rem;
+    
+}
+
+.imgOne {
+    border-radius: 2rem;
 }
 
 .team {
-    background-color: #0b0b0b;
     display: flex;
     justify-content: space-around;
     padding: 5vh 0;
@@ -94,13 +124,14 @@ body {
 }
 
 .member img {
-    width: 50%;
+    width: 70%;
     height: auto;
     border-radius: 10px;
+    border: 2px solid #ff7300;
+    padding: 30px;
 }
 
 .product {
-    background-color: #0B0B0B;
     height: auto; 
     padding: 5vh 5vw;
     margin: 0; 
@@ -109,7 +140,7 @@ body {
     justify-content: flex-start; 
 }
 
-.product .textpro {
+.product {
     font-size: 2.5vh;
     color: white;
     text-align: center;
@@ -227,8 +258,11 @@ footer {
     .Textteam, .text {
         font-family: sans-serif;
         font-size: 3.5vh;
-        margin-top: 0; 
-        
+        margin-top: 0;      
+    }
+
+    .slide {
+        height: 100%;
     }
 }
 
@@ -284,6 +318,10 @@ footer {
     h1 {
         font-size: 4vh;
     }
+
+    .slide {
+        height: 100%;
+    }
 }
 
 .nomes {
@@ -294,21 +332,21 @@ footer {
 }
 
 .Textteam {
-    background-color: #0B0B0B;
     color: white;
     font-size: 2.8vh;
     text-align: center;
     margin-top: -5.5vh;
     padding: 20px;
+    margin-bottom: 6rem;
 }
 
-.text {
-    background-color: #0B0B0B;
+.text, .textpro {
     color: white;
-    font-size: 3vh;
+    font-size: 1.2rem;
+    line-height: 2rem;
     text-align: center;
-    margin-top: 0; 
-    margin-left: 0;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 
